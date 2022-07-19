@@ -17,7 +17,7 @@ import java.util.List;
 @Getter
 @Setter
 @NoArgsConstructor
-public class RecipeDTO {
+public class RecipeFormDTO {
 
     private int id;
 

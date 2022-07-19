@@ -16,12 +16,12 @@ import java.io.InputStream;
 @Service
 public class FileServiceImpl implements FileService{
 
-    @Value("${app.upload.dir}")
-    public String uploadDir;
+   /* @Value("${app.upload.dir}")
+    public String uploadDir;*/
 
     Logger logger = LoggerFactory.getLogger(getClass());
 
-    public void uploadFile(MultipartFile file, String prefix) {
+   /* public void uploadFile(MultipartFile file, String prefix) {
         try {
             InputStream inputStream = file.getInputStream();
             BufferedImage image = ImageIO.read(inputStream);
@@ -31,7 +31,7 @@ public class FileServiceImpl implements FileService{
         } catch (Exception e) {
             logger.error("Unable to save the image: "+ e.getMessage());
         }
-    }
+    }*/
 
     private static BufferedImage resize(BufferedImage img, int width, int height) {
         Dimension imageSize = new Dimension(img.getWidth(), img.getHeight());
