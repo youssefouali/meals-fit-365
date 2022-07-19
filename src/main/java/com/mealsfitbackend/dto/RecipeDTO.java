@@ -21,18 +21,20 @@ public class RecipeDTO {
 
     private int id;
 
-    @NotNull(message = "Įveskite recepto pavadinimą")
-    @Size(min = 1, message = "Įveskite recepto pavadinimą")
+    @NotNull(message = "Enter the name of the recipe")
+    @Size(min = 1, message = "Enter the name of the recipe")
     private String title;
 
-    @NotNull(message = "Recepte turi būti bent vienas ingredientas")
+    @NotNull(message = "The recipe must contain at least one ingredient")
     private List<IngredientDTO> ingredients;
 
-    @NotNull(message = "Recepte turi būti paruošimo instrukcija")
+    @NotNull(message = "The recipe must include preparation instructions")
     private List<Preparation> preparations;
 
-    @NotNull(message = "Pasirinkite bent vieną patiekalo tipą")
-    @Size(min = 1, message = "Pasirinkite bent vieną patiekalo tipą")
+    @NotNull(message = "\n" +
+            "Choose at least one type of dish")
+    @Size(min = 1, message = "\n" +
+            "Choose at least one type of dish")
     private List<MealType> mealTypes;
 
     private String image;
